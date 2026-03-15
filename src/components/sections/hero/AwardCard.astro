@@ -1,0 +1,21 @@
+---
+interface Props {
+  index: string;
+  name: string;
+  date: string;
+  description: string;
+}
+
+const { index, name, date, description } = Astro.props as Props;
+---
+
+<article class="p-10 rounded-t-3xl flex justify-between flex-wrap gap-4 bg-white/10 backdrop-blur-md shadow-sm">
+  <div class="flex-1 flex gap-4">
+    <span class="text-size-xlarge">{index.padStart(2, "0")}</span>
+    <div class="flex flex-col">
+      <time class="opacity-80">{date}</time>
+      <h2 class="text-size-large">{name}</h2>
+    </div>
+  </div>
+  <p class="max-w-[50ch] font-light">{description}</p>
+</article>

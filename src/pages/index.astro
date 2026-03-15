@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Footer from "@components/layout/Footer.astro";
+import Header from "@components/layout/Header.astro";
+import Hero from "@components/sections/hero/Hero.astro";
+import Layout from "@layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { basic, marquee } from "@data/data.json";
+import Marquee from "@components/sections/marquee/Marquee.astro";
+
+const { name } = basic;
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={name}>
+  <Header />
+  <main class="flex-1 flex flex-col gap-12">
+    <Hero />
+    <Marquee items={marquee} />
+  </main>
+  <Footer />
 </Layout>
