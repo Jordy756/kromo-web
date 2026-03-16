@@ -9,7 +9,9 @@ interface Props {
 const { index, name, date, description } = Astro.props as Props;
 ---
 
-<article class="p-10 rounded-t-3xl flex justify-between flex-wrap gap-4 bg-white/10 backdrop-blur-md shadow-sm">
+<article
+  class="p-10 rounded-t-3xl flex justify-between flex-wrap gap-4 bg-brown-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 border border-gray-100 shadow-sm"
+>
   <div class="flex-1 flex gap-4">
     <span class="text-size-xlarge">{index.padStart(2, "0")}</span>
     <div class="flex flex-col">

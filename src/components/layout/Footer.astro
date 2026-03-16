@@ -1,9 +1,12 @@
 ---
 import Link from "@components/ui/Link.astro";
+import { basic } from "@data/data.json";
+import { Image } from "astro:assets";
+
+const { logo, slogan } = basic;
 
 const year = new Date().getFullYear();
 
-const slogan = "Genera documentación de API de manera rápida y sencilla con Kromo.";
 const footerNavigation = [
   { label: "Home", path: "/#home" },
   { label: "Sobre nosotros", path: "/#about-us" },
@@ -17,14 +20,7 @@ const footerNavigation = [
   <section class="flex flex-wrap justify-between gap-8">
     <div class="flex-1 flex flex-col items-start gap-4">
       <a href="/#home" class="">
-        <img
-          src="/logo.webp"
-          width={250}
-          class="object-contain"
-          alt="Logo de SilkTree"
-          loading="lazy"
-          decoding="async"
-        />
+        <Image src={logo} width={250} height={100} class="object-contain" alt="Logo de SilkTree" />
       </a>
       <blockquote>{slogan}</blockquote>
       <Link href="/authorization">Comenzar</Link>

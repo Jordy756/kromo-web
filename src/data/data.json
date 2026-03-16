@@ -1,7 +1,9 @@
 {
   "basic": {
     "name": "Kromo",
-    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum magnam nulla, amet, omnis deleniti unde aut, assumenda impedit odio provident repudiandae. Ipsum atque culpa labore nemo aliquam sequi."
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum magnam nulla, amet, omnis deleniti unde aut, assumenda impedit odio provident repudiandae. Ipsum atque culpa labore nemo aliquam sequi.",
+    "logo": "/logo.webp",
+    "slogan": "Cuidando tu salud con confianza y dedicación"
   },
   "awards": [
     {
