@@ -1,24 +1,24 @@
 ---
-import Link from "@components/ui/Link.astro";
-import { basic } from "@data/data.json";
-import { Image } from "astro:assets";
+import Link from '@components/ui/Link.astro';
+import { basic } from '@data/data.json';
+import { Image } from 'astro:assets';
 
 const { logo, slogan } = basic;
 
 const year = new Date().getFullYear();
 
 const footerNavigation = [
-  { label: "Home", path: "/#home" },
-  { label: "Sobre nosotros", path: "/#about-us" },
-  { label: "Servicios", path: "/#services" },
-  { label: "Médicos", path: "/#our-team" },
-  { label: "Preguntas Frecuentes", path: "/#faq" },
+  { label: 'Home', path: '/#home' },
+  { label: 'Sobre nosotros', path: '/#about-us' },
+  { label: 'Servicios', path: '/#services' },
+  { label: 'Médicos', path: '/#our-team' },
+  { label: 'Preguntas Frecuentes', path: '/#faq' },
 ];
 ---
 
-<footer class="p-10 flex flex-col gap-20">
+<footer class="flex flex-col gap-20 p-10">
   <section class="flex flex-wrap justify-between gap-8">
-    <div class="flex-1 flex flex-col items-start gap-4">
+    <div class="flex flex-1 flex-col items-start gap-4">
       <a href="/#home" class="">
         <Image src={logo} width={250} height={100} class="object-contain" alt="Logo de SilkTree" />
       </a>
@@ -29,9 +29,9 @@ const footerNavigation = [
       <ul class="flex flex-col gap-4">
         {
           footerNavigation.map(({ label, path }, index) => (
-            <li class="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:left-0 before:bottom-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full">
-              <span class="min-w-7 text-size-small">{(index + 1 + "").padStart(2, "0")}</span>
-              <a href={path} class="font-medium text-size-xlarge uppercase">
+            <li class="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full">
+              <span class="min-w-7 text-size-small">{(index + 1 + '').padStart(2, '0')}</span>
+              <a href={path} class="text-size-xlarge font-medium uppercase">
                 {label}
               </a>
             </li>
@@ -40,7 +40,7 @@ const footerNavigation = [
       </ul>
     </nav>
   </section>
-  <aside class="flex items-center justify-between gap-8 flex-wrap-reverse">
+  <aside class="flex flex-wrap-reverse items-center justify-between gap-8">
     <span>&copy; SilkTree {year}</span>
     <nav>
       <ul class="flex gap-4">

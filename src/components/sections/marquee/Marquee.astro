@@ -1,24 +1,20 @@
 ---
 interface Props {
   items: string[];
-  color?: "text-neutral-950" | "var(--primary-500)";
+  color?: 'text-neutral-950' | 'var(--primary-500)';
 }
 
-const { items, color = "text-neutral-950" } = Astro.props;
+const { items, color = 'text-neutral-950' } = Astro.props;
 ---
 
-<aside class="flex gap-20 py-4 overflow-hidden w-full hover:[&>ul]:[animation-play-state:paused]">
+<aside class="flex w-full gap-20 overflow-hidden py-4 hover:[&>ul]:[animation-play-state:paused]">
   {
     [0, 1].map((_) => (
-      <ul class="flex gap-20 animate-marquee">
+      <ul class="flex animate-marquee gap-20">
         {items.map((item) => (
-          <li class="flex gap-4 text-size-mega whitespace-nowrap uppercase font-medium">
+          <li class="flex gap-4 text-size-mega font-medium whitespace-nowrap uppercase">
             <span>{item}</span>
-            <div
-              class="relative border w-10 h-10 rounded-full 
-                before:absolute before:top-1/2 before:left-1/2 before:w-3/4 before:h-px before:-translate-y-1/2 before:-translate-x-1/2 before:bg-neutral-950
-                after:absolute after:top-1/2 after:left-1/2 after:w-3/4 after:h-px after:-translate-y-1/2 after:-translate-x-1/2 after:rotate-90 after:bg-neutral-950"
-            />
+            <div class="relative h-10 w-10 rounded-full border before:absolute before:top-1/2 before:left-1/2 before:h-px before:w-3/4 before:-translate-x-1/2 before:-translate-y-1/2 before:bg-neutral-950 after:absolute after:top-1/2 after:left-1/2 after:h-px after:w-3/4 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-90 after:bg-neutral-950" />
           </li>
         ))}
       </ul>

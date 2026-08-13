@@ -10,10 +10,10 @@ const { index, name, date, description } = Astro.props as Props;
 ---
 
 <article
-  class="p-10 rounded-t-3xl flex justify-between flex-wrap gap-4 bg-brown-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 border border-gray-100 shadow-sm"
+  class="bg-brown-200 bg-opacity-0 flex flex-wrap justify-between gap-4 rounded-md rounded-t-3xl border bg-clip-padding p-10 shadow-sm backdrop-blur-md backdrop-filter"
 >
-  <div class="flex-1 flex gap-4">
-    <span class="text-size-xlarge">{index.padStart(2, "0")}</span>
+  <div class="flex flex-1 gap-4">
+    <span class="text-size-xlarge">{index.padStart(2, '0')}</span>
     <div class="flex flex-col">
       <time class="opacity-80">{date}</time>
       <h2 class="text-size-large">{name}</h2>

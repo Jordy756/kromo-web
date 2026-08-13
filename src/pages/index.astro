@@ -1,17 +1,17 @@
 ---
-import Footer from "@components/layout/Footer.astro";
-import Header from "@components/layout/Header.astro";
-import Hero from "@components/sections/hero/Hero.astro";
-import Layout from "@layouts/Layout.astro";
-import Marquee from "@components/sections/marquee/Marquee.astro";
-import { basic, marquee } from "@data/data.json";
+import Footer from '@components/shell/Footer.astro';
+import Header from '@components/shell/Header.astro';
+import Hero from '@components/sections/hero/Hero.astro';
+import Layout from '@layouts/Layout.astro';
+import Marquee from '@components/sections/marquee/Marquee.astro';
+import { basic, marquee } from '@data/data.json';
 
 const { name } = basic;
 ---
 
 <Layout title={name}>
   <Header />
-  <main class="flex-1 flex flex-col gap-12">
+  <main class="flex flex-1 flex-col gap-12">
     <Hero />
     <Marquee items={marquee} />
   </main>
