@@ -1,13 +1,15 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
-
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: '',
   vite: {
     plugins: [tailwindcss()],
   },
+
   fonts: [
     {
       name: 'Poppins',
@@ -21,4 +23,6 @@ export default defineConfig({
       fallbacks: ['sans-serif'],
     },
   ],
+
+  integrations: [sitemap()],
 });

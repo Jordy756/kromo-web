@@ -39,6 +39,15 @@
 }
 
 @layer base {
+  :root {
+    interpolate-size: allow-keywords;
+    @apply scrollbar-thin scrollbar-thumb-neutral-500 scrollbar-track-transparent scroll-smooth;
+  }
+
+  :is(a, button) {
+    @apply cursor-pointer;
+  }
+
   :is(h1, h2, h3, h4, h5, h6) {
     @apply text-balance;
   }
