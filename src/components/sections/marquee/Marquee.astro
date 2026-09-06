@@ -12,7 +12,7 @@ const { items, color = 'text-neutral-950' } = Astro.props;
     [0, 1].map((_) => (
       <ul class="flex animate-marquee gap-20">
         {items.map((item) => (
-          <li class="flex gap-4 text-size-mega font-medium whitespace-nowrap uppercase">
+          <li class="text-size-mega flex gap-4 font-medium whitespace-nowrap uppercase">
             <span>{item}</span>
             <div class="relative h-10 w-10 rounded-full border before:absolute before:top-1/2 before:left-1/2 before:h-px before:w-3/4 before:-translate-x-1/2 before:-translate-y-1/2 before:bg-neutral-950 after:absolute after:top-1/2 after:left-1/2 after:h-px after:w-3/4 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-90 after:bg-neutral-950" />
           </li>
