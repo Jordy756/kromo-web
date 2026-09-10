@@ -16,11 +16,9 @@ const { name, summary } = basic;
     <Link href="/authorization">Comenzar</Link>
   </article>
   <section class="flex flex-col gap-4">
-    {
-      awards.map(({ name, date, description }, index) => (
-        <AwardCard index={index + 1 + ''} name={name} date={date} description={description} />
-      ))
-    }
+    {awards.map(({ name, date, description }, index) => (
+      <AwardCard index={index + 1 + ''} name={name} date={date} description={description} />
+    ))}
   </section>
   <video
     src="/videos/hero.mp4"
@@ -28,5 +26,6 @@ const { name, summary } = basic;
     autoplay
     muted
     loop
-    class="cover absolute top-0 left-0 -z-1 h-full w-full"></video>
+    class="cover absolute top-0 left-0 -z-1 h-full w-full"
+  ></video>
 </section>

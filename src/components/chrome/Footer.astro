@@ -27,16 +27,14 @@ const footerNavigation = [
     </div>
     <nav class="flex-1">
       <ul class="flex flex-col gap-4">
-        {
-          footerNavigation.map(({ label, path }, index) => (
-            <li class="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full">
-              <span class="text-size-small min-w-7">{(index + 1 + '').padStart(2, '0')}</span>
-              <a href={path} class="text-size-xlarge font-medium uppercase">
-                {label}
-              </a>
-            </li>
-          ))
-        }
+        {footerNavigation.map(({ label, path }, index) => (
+          <li class="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full">
+            <span class="text-size-small min-w-7">{(index + 1 + '').padStart(2, '0')}</span>
+            <a href={path} class="text-size-xlarge font-medium uppercase">
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   </section>

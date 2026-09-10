@@ -1,5 +1,5 @@
 ---
-import CloseIcon from '@components/icons/Close.astro';
+import CloseIcon from '@components/icons/CloseIcon.astro';
 import { Image } from 'astro:assets';
 import { basic } from '@data/data.json';
 
@@ -47,9 +47,7 @@ const socialNetworks = [
 >
   <nav class="flex h-full flex-col justify-between">
     <div class="flex items-center justify-between gap-8">
-      <span
-        class="realtive -rotate-90 uppercase after:absolute after:right-[calc(100%+8px)] after:bottom-1/2 after:h-px after:w-[50vh] after:-translate-y-1/2 after:bg-neutral-950"
-      >
+      <span class="realtive -rotate-90 uppercase after:absolute after:right-[calc(100%+8px)] after:bottom-1/2 after:h-px after:w-[50vh] after:-translate-y-1/2 after:bg-neutral-950">
         Menu
       </span>
       <button class="flex cursor-pointer" popovertarget="menu" popovertargetaction="hide">
@@ -57,34 +55,32 @@ const socialNetworks = [
       </button>
     </div>
     <ul class="flex w-[min(1100px,100%)] flex-col gap-8 self-center">
-      {
-        navigationLinks.map(({ label, path }, index) => (
-          <li class="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full">
-            <span class="text-size-small min-w-7 font-light">{(index + 1 + '').padStart(2, '0')}</span>
-            <a href={path} class="text-size-huge font-semibold uppercase">
-              {label}
-            </a>
-          </li>
-        ))
-      }
+      {navigationLinks.map(({ label, path }, index) => (
+        <li class="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full">
+          <span class="text-size-small min-w-7 font-light">{(index + 1 + '').padStart(2, '0')}</span>
+          <a href={path} class="text-size-huge font-semibold uppercase">
+            {label}
+          </a>
+        </li>
+      ))}
     </ul>
     <aside class="flex justify-between gap-8">
       <ul class="flex flex-1 gap-4">
         <li>
-          <a href={'/a'} class="border-b">Comenzar</a>
+          <a href={'/a'} class="border-b">
+            Comenzar
+          </a>
         </li>
       </ul>
       <div class="h-px w-10 bg-neutral-950"></div>
       <ul class="flex flex-1 justify-end gap-4">
-        {
-          socialNetworks.map(({ name, url }) => (
-            <li>
-              <a href={url} target="_blank" rel="noopener noreferrer" class="border-b">
-                {name}
-              </a>
-            </li>
-          ))
-        }
+        {socialNetworks.map(({ name, url }) => (
+          <li>
+            <a href={url} target="_blank" rel="noopener noreferrer" class="border-b">
+              {name}
+            </a>
+          </li>
+        ))}
       </ul>
     </aside>
   </nav>
