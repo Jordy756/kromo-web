@@ -1,13 +1,6 @@
 @import 'tailwindcss';
 
 @theme {
-  /*--text-size-mega: clamp(2.027rem, 5vw + 1rem, 3.815rem);
-  --text-size-huge: clamp(1.802rem, 4vw + 1rem, 3.052rem);
-  --text-size-xlarge: clamp(1.602rem, 3vw + 1rem, 2.441rem);
-  --text-size-large: clamp(1.424rem, 2.5vw + 1rem, 1.953rem);
-  --text-size-medium: clamp(1.266rem, 2vw + 1rem, 1.563rem);
-  --text-size-small: clamp(1.125rem, 1.5vw + 1rem, 1.25rem);*/
-
   /* Primary Colors */
   --color-primary-50: #edebfb;
   --color-primary-100: #dcd8f8;
@@ -39,10 +32,6 @@
 @layer base {
   :root {
     interpolate-size: allow-keywords;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-neutral-500) transparent;
-    scrollbar-gutter: stable;
-    scroll-behavior: smooth;
   }
 
   :is(a, button) {
